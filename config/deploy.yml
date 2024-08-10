@@ -1,0 +1,17 @@
+service: demo-go-gin
+image: gambala/demo-go-gin
+servers:
+  - <%= ENV["MAIN_SERVER_IP"] %>
+labels:
+  traefik.http.routers.demo-go-gin-web.rule: Host(`gin.gambala.pro`)
+registry:
+  server: ghcr.io
+  username: gambala
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+healthcheck:
+  interval: 10s
+  path: /
+  port: 1323
+builder:
+  multiarch: false
