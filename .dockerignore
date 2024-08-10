@@ -1,0 +1,27 @@
+# Binaries
+server/
+
+# Vendor directory (if you're not using vendoring)
+vendor/
+
+# IDE/editor configurations
+.vscode/
+.idea/
+
+# Temporary files
+tmp
+
+# Dev tools
+.air.toml
+
+# Docker related files
+.dockerignore
+Dockerfile
+
+# Git
+.git
+.gitignore
+
+# Environment files (except templates)
+/.env*
+!/.env*.erb
